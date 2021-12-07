@@ -1,0 +1,6 @@
+#!/bin/bash
+path=~/.servers
+ip_addr=`grep -A 3 $1 $path | grep IP-адрес | tr -d ' ' | cut -d ':' -f2`
+password=`grep -A 3 $1 $path | grep Пароль | tr -d ' ' | cut -d ':' -f2`
+
+sshpass -p $password ssh root@$ip_addr

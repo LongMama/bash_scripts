@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -n "$1" ]
+then
+  cat ~/.servers | grep -iA 3 $1
+else
+  cat ~/.servers
+fi
