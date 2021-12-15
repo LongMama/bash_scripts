@@ -1,7 +1,10 @@
 #!/bin/bash
+
+PATH_TO_FILE=___
+
 if [ -n "$1" ]
 then
-  cat ~/.servers | grep -iA 3 $1
+  cat $PATH_TO_FILE | grep -iA 3 $1
 else
-  cat ~/.servers
+  cat $PATH_TO_FILE
 fi
